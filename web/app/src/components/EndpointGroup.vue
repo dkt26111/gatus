@@ -80,7 +80,7 @@ export default {
   data() {
     return {
       unhealthyCount: 0,
-      collapsed: sessionStorage.getItem(`gatus:endpoint-group:${this.name}:collapsed`) === "true"
+      collapsed: sessionStorage.getItem(`gatus:endpoint-group:${this.name}:collapsed`) == null ? true : sessionStorage.getItem(`gatus:endpoint-group:${this.name}:collapsed`) === "true"
     }
   }
 }
